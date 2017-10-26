@@ -16,21 +16,19 @@
 
 
 
-
-
 import UIKit
 
 
-protocol StarRatingDelegate {
-    func ay_starRateChange(rate: CGFloat) -> Void;
+protocol YTTStarRatingDelegate: class {
+    func yttStarRatingView(_ starRatingView: YTTStarRatingView, rate: CGFloat);
 }
 
 
-class StarRatingView: UIView {
+class YTTStarRatingView: UIView {
     
     private var totalStarNumber: Int!
     private var foregroundView: UIView!
-    private var delegate: StarRatingDelegate?
+    weak var delegate: YTTStarRatingDelegate?
     
     var rate: CGFloat! = 0{
         didSet{
@@ -42,21 +40,23 @@ class StarRatingView: UIView {
     
     
 
-    init(frame: CGRect, totalStarts: Int = 5, delegate: StarRatingDelegate? = nil) {
+    init(frame: CGRect, totalStarts: Int = 5, delegate: YTTStarRatingDelegate? = nil) {
         super.init(frame: frame)
         totalStarNumber = totalStarts
         self.delegate = delegate
-        self.addSubview(self.ay_creatStartView("haoping_gray"))
-        foregroundView = self.ay_creatStartView("haoping_orange")
+        self.addSubview(self.yttCreatStartView("haoping_gray"))
+        foregroundView = self.yttCreatStartView("haoping_orange")
         self.addSubview(foregroundView)
     }
+    
+   
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-    private func ay_creatStartView(_ imageName: String) -> UIView {
+    private func yttCreatStartView(_ imageName: String) -> UIView {
         let starView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         starView.clipsToBounds = true
         starView.backgroundColor = UIColor.clear
@@ -77,7 +77,7 @@ class StarRatingView: UIView {
         let point = touch?.location(in: self)
         if (point?.x)! >= CGFloat(0) && (point?.x)! <= self.frame.width {
             rate = (point?.x)! / self.frame.width
-            delegate?.ay_starRateChange(rate: rate)
+            delegate?.yttStarRatingView(self, rate: rate)
         }
         
     }
@@ -86,20 +86,7 @@ class StarRatingView: UIView {
         let touch = touches.first
         let point = touch?.location(in: self)
         rate = (point?.x)! / self.frame.width
-        delegate?.ay_starRateChange(rate: rate)
+        delegate?.yttStarRatingView(self, rate: rate)
     }
-    
-    
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

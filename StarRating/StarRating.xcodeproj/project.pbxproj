@@ -13,7 +13,7 @@
 		3B7BB3051F17091B007947AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7BB3041F17091B007947AD /* Assets.xcassets */; };
 		3B7BB3081F17091B007947AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7BB3061F17091B007947AD /* LaunchScreen.storyboard */; };
 		3B7BB3131F17091B007947AD /* StarRatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7BB3121F17091B007947AD /* StarRatingUITests.swift */; };
-		3B7BB31F1F170967007947AD /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7BB31E1F170967007947AD /* StarRatingView.swift */; };
+		3B7BB31F1F170967007947AD /* YTTStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7BB31E1F170967007947AD /* YTTStarRatingView.swift */; };
 		3B7BB3241F170DFD007947AD /* haoping_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7BB3201F170DFD007947AD /* haoping_orange@2x.png */; };
 		3B7BB3251F170DFD007947AD /* haoping_orange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7BB3211F170DFD007947AD /* haoping_orange@3x.png */; };
 		3B7BB3261F170DFD007947AD /* haoping_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7BB3221F170DFD007947AD /* haoping_gray@2x.png */; };
@@ -41,7 +41,7 @@
 		3B7BB30E1F17091B007947AD /* StarRatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarRatingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7BB3121F17091B007947AD /* StarRatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingUITests.swift; sourceTree = "<group>"; };
 		3B7BB3141F17091B007947AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B7BB31E1F170967007947AD /* StarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		3B7BB31E1F170967007947AD /* YTTStarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTTStarRatingView.swift; sourceTree = "<group>"; };
 		3B7BB3201F170DFD007947AD /* haoping_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "haoping_orange@2x.png"; sourceTree = "<group>"; };
 		3B7BB3211F170DFD007947AD /* haoping_orange@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "haoping_orange@3x.png"; sourceTree = "<group>"; };
 		3B7BB3221F170DFD007947AD /* haoping_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "haoping_gray@2x.png"; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				3B7BB3211F170DFD007947AD /* haoping_orange@3x.png */,
 				3B7BB3221F170DFD007947AD /* haoping_gray@2x.png */,
 				3B7BB3231F170DFD007947AD /* haoping_gray@3x.png */,
-				3B7BB31E1F170967007947AD /* StarRatingView.swift */,
+				3B7BB31E1F170967007947AD /* YTTStarRatingView.swift */,
 			);
 			path = StarRatingView;
 			sourceTree = "<group>";
@@ -228,7 +228,7 @@
 			files = (
 				3B7BB3001F17091B007947AD /* ViewController.swift in Sources */,
 				3B7BB2FE1F17091B007947AD /* AppDelegate.swift in Sources */,
-				3B7BB31F1F170967007947AD /* StarRatingView.swift in Sources */,
+				3B7BB31F1F170967007947AD /* YTTStarRatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +434,7 @@
 				3B7BB3191F17091B007947AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B7BB31A1F17091B007947AD /* Build configuration list for PBXNativeTarget "StarRatingUITests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +443,7 @@
 				3B7BB31C1F17091B007947AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

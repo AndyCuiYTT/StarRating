@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, StarRatingDelegate {
+class ViewController: UIViewController, YTTStarRatingDelegate {
 
     private var label: UILabel!
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController, StarRatingDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        let starView = StarRatingView(frame: CGRect(x: 10, y: 30, width: 110, height: 20), delegate: self)
+        let starView = YTTStarRatingView(frame: CGRect(x: 10, y: 30, width: 310, height: 20), delegate: self)
         self.view.addSubview(starView)
         starView.rate = 0.8
         
@@ -29,8 +29,8 @@ class ViewController: UIViewController, StarRatingDelegate {
         
     }
 
-    func ay_starRateChange(rate: CGFloat) {
-        label.text = String(format: "%.2f", rate)
+    func yttStarRatingView(_ starRatingView: YTTStarRatingView, rate: CGFloat) {
+        
     }
     
     
